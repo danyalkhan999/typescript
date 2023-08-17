@@ -1,40 +1,53 @@
-let names = ["Batman", "Flash", "Aquaman"];  // only string
+// explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
 
-// names.push(34);
-names.push("Superman")
-// names[1] = 25;
+// now we can only intialize these variables with there respective data-types
+// character = 123
+character = "Mario";
 
-let numbers = [12, 22, 34, 45];     // only numbers
+// age = "abc"
+age = 23;
 
-numbers.push(11);
-// numbers.push("abc");
-// numbers[0] = "abc";
+// isLoggedIn = "gROOT"
+isLoggedIn = false 
 
-let mixed = ["Batman", 22, 34, "Flash", true];  // it takes the data-type of when variable is declared, can't change data-type after declaration
+// arrays
 
-mixed.push("ABc");
+let arr: string[] = [];
+
+// arr.push(1200)
+arr.push("MIAMI");
+
+
+//  union Datatype
+let mixed: (string | number)[] = [];
+mixed.push("Krunal");
 mixed.push(25);
-mixed.push(false);
+// mixed.push(false)
+
+// we can also do this union to a normal variable
+
+let eid: (number | string);
+
+eid = "256"
+eid = 256
+// eid = true;
 
 // objects
+let ninjaOne: object;
 
-let ninja = {
-    name: "Groot",
-    belt: "white",
-    age: 17
-    // we can't change the data-type of these variables
-    // once we define the object we can't add new properties into it
-
+ninjaOne = {
+    name: "ninja",
+    age: 12,
+    belt: "White"
 }
 
-ninja.name = "Thor"
-ninja.age = 1500
-// ninja.belt = 25
-// ninja.name = 500
-
-ninja = {
-    name: "Flash",
-    belt: "orange",
-    age: 22 
-    // if we miss some properties to enter it's check with the initial structure and copmpare and give error
+let ninja2 : {
+    name: string,
+    age: number,
+    belt: boolean
 }
+
+// ninja2 = {name: "Flash", age: 23, belt: [true, false]}
