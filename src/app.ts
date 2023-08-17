@@ -1,4 +1,30 @@
-// classes
+// interface
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string) : void;
+    spent(x: number) : number;
+}
+
+const me : IsPerson = {
+    name: "Danyal",
+    age: 22,
+    speak(text: string): void {
+        console.log(text)
+    },
+    spent(amount: number) : number {
+        console.log(`${this.name} spend ${amount}`);
+        return amount;
+    }
+}
+
+const greetPerson = (person: IsPerson) => {
+    console.log("Hello", person.name);
+}
+
+greetPerson(me);
+
+
 import {Invoice} from './classes/Invoice.js'
 
 const invoOne = new Invoice("Jhon", "Grocery", 1425);

@@ -1,4 +1,18 @@
-// classes
+const me = {
+    name: "Danyal",
+    age: 22,
+    speak(text) {
+        console.log(text);
+    },
+    spent(amount) {
+        console.log(`${this.name} spend ${amount}`);
+        return amount;
+    }
+};
+const greetPerson = (person) => {
+    console.log("Hello", person.name);
+};
+greetPerson(me);
 import { Invoice } from './classes/Invoice.js';
 const invoOne = new Invoice("Jhon", "Grocery", 1425);
 const invoTwo = new Invoice("Clara", "Books", 900);
