@@ -1,32 +1,12 @@
-let greet = () => {
-    console.log("Hello, Good Morning");
+// type aliases
+type stringOrNum = string | number;
+type objWithName = {name: String, uid: stringOrNum}
+
+
+const logDetails = (uid: stringOrNum, item: string) =>{
+    console.log(`${item} has uid of ${uid}`)
 }
 
-let greetAgain: Function;
-
-// greetAgain = "hello"
-
-greetAgain= () => {
-    console.log("Hello, Again")
+const greet = (user: objWithName) => {
+    console.log(`Welcome ${user.name}`)
 }
-
-const add = ( a: number, b: number, c: number | string ) => {
-    console.log(a+b);
-    console.log(c);
-}
-
-add(5, 10, 20)
-
-
-const minus = (a: number, b: number): number => { // this function can only return number and it can't be change further
-    return (a-b);
-}
-
-console.log(minus(15, 10));
-
-//  function with return type void
-const welcome = (name: string) : void => {
-    console.log(`Welcome ${name}`);
-}
-
-welcome("Danyal")
