@@ -1,7 +1,13 @@
 var character = "Iron-Man";
-console.log(character);
-var inputs = document.querySelectorAll('input');
-console.log(inputs);
-inputs.forEach(function (input) {
-    console.log(input);
-});
+var age = 24;
+var isBlackbelt = true;
+// age = "Thirty two"
+// isBlackbelt = 23;
+isBlackbelt = false;
+age = 32;
+//  circumference function'
+var circ = function (diameter) {
+  return diameter * Math.PI;
+};
+
+console.log(circ(15));

@@ -1,11 +1,19 @@
-const character = "Iron-Man";
+let character = "Iron-Man";
+let age = 24;
+let isBlackbelt = true;
 
-console.log(character);
+// age = "Thirty two"
 
-const inputs = document.querySelectorAll('input');
+// isBlackbelt = 23;
+isBlackbelt = false;
 
-console.log(inputs);
+age = 32;
 
-inputs.forEach(input => {
-    console.log(input)
-})
+//  circumference function'
+
+const circ = (diameter: number) => {
+    return diameter * Math.PI;
+}
+
+// console.log(circ("abc"));
+console.log(circ(15));
