@@ -1,28 +1,32 @@
-let age: any;
+let greet = () => {
+    console.log("Hello, Good Morning");
+}
 
-age = 22;
-console.log(age)
+let greetAgain: Function;
 
-age = "abc"
-console.log(age)
+// greetAgain = "hello"
 
-age = true;
-console.log(age)
+greetAgain= () => {
+    console.log("Hello, Again")
+}
 
-age = {name: "Dinesh", age: 18}
-console.log(age)
+const add = ( a: number, b: number, c: number | string ) => {
+    console.log(a+b);
+    console.log(c);
+}
 
-let mixed: any[] = [];
+add(5, 10, 20)
 
-mixed.push("Ritesh");
-mixed.push("1230");
-mixed.push(12)
-mixed.push(false);
-mixed.push({itemName: "Mango", amt: 10, qty: 3, total: 30})
-console.log(mixed);
 
-let ninja : {name: any, age: any};
+const minus = (a: number, b: number): number => { // this function can only return number and it can't be change further
+    return (a-b);
+}
 
-ninja = {name: "Damon", age: 25};
+console.log(minus(15, 10));
 
-ninja = {name: 52, age: "Damon"}
+//  function with return type void
+const welcome = (name: string) : void => {
+    console.log(`Welcome ${name}`);
+}
+
+welcome("Danyal")

@@ -1,20 +1,23 @@
 "use strict";
-let age;
-age = 22;
-console.log(age);
-age = "abc";
-console.log(age);
-age = true;
-console.log(age);
-age = { name: "Dinesh", age: 18 };
-console.log(age);
-let mixed = [];
-mixed.push("Ritesh");
-mixed.push("1230");
-mixed.push(12);
-mixed.push(false);
-mixed.push({ itemName: "Mango", amt: 10, qty: 3, total: 30 });
-console.log(mixed);
-let ninja;
-ninja = { name: "Damon", age: 25 };
-ninja = { name: 52, age: "Damon" };
+let greet = () => {
+    console.log("Hello, Good Morning");
+};
+let greetAgain;
+// greetAgain = "hello"
+greetAgain = () => {
+    console.log("Hello, Again");
+};
+const add = (a, b, c) => {
+    console.log(a + b);
+    console.log(c);
+};
+add(5, 10, 20);
+const minus = (a, b) => {
+    return (a - b);
+};
+console.log(minus(15, 10));
+//  function with return type void
+const welcome = (name) => {
+    console.log(`Welcome ${name}`);
+};
+welcome("Danyal");
