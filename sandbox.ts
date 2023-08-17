@@ -1,53 +1,28 @@
-// explicit types
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+let age: any;
 
-// now we can only intialize these variables with there respective data-types
-// character = 123
-character = "Mario";
+age = 22;
+console.log(age)
 
-// age = "abc"
-age = 23;
+age = "abc"
+console.log(age)
 
-// isLoggedIn = "gROOT"
-isLoggedIn = false 
+age = true;
+console.log(age)
 
-// arrays
+age = {name: "Dinesh", age: 18}
+console.log(age)
 
-let arr: string[] = [];
+let mixed: any[] = [];
 
-// arr.push(1200)
-arr.push("MIAMI");
+mixed.push("Ritesh");
+mixed.push("1230");
+mixed.push(12)
+mixed.push(false);
+mixed.push({itemName: "Mango", amt: 10, qty: 3, total: 30})
+console.log(mixed);
 
+let ninja : {name: any, age: any};
 
-//  union Datatype
-let mixed: (string | number)[] = [];
-mixed.push("Krunal");
-mixed.push(25);
-// mixed.push(false)
+ninja = {name: "Damon", age: 25};
 
-// we can also do this union to a normal variable
-
-let eid: (number | string);
-
-eid = "256"
-eid = 256
-// eid = true;
-
-// objects
-let ninjaOne: object;
-
-ninjaOne = {
-    name: "ninja",
-    age: 12,
-    belt: "White"
-}
-
-let ninja2 : {
-    name: string,
-    age: number,
-    belt: boolean
-}
-
-// ninja2 = {name: "Flash", age: 23, belt: [true, false]}
+ninja = {name: 52, age: "Damon"}
