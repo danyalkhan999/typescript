@@ -1,12 +1,21 @@
 "use strict";
-// const anchor = document.querySelector('a') !; // exclamation mark says that anchor have some value and it's not null
-// console.log(anchor.href);
-// Method 1 
-// if(anchor){
-//     console.log(anchor.href); 
-// }
-// console.log(anchor.href);
-// const form = document.querySelector('form')!;
+// classes
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes ₹${this.amount} for ${this.details}`;
+    }
+}
+const invoOne = new Invoice("Jhon", "Grocery", 1425);
+const invoTwo = new Invoice("Clara", "Books", 900);
+let invoices = [];
+invoices.push(invoOne);
+invoices.push(invoTwo);
+console.log(invoices);
 const form = document.querySelector('.new-item-form');
 // console.log(form.children);
 // inputs

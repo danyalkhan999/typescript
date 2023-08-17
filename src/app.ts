@@ -1,15 +1,30 @@
-// const anchor = document.querySelector('a') !; // exclamation mark says that anchor have some value and it's not null
+// classes
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
 
-// console.log(anchor.href);
+    constructor  (c:string, d: string, a: number){
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
 
-// Method 1 
-// if(anchor){
-//     console.log(anchor.href); 
-// }
+    format () {
+        return `${this.client} owes ₹${this.amount} for ${this.details}`
+    }
+}
 
-// console.log(anchor.href);
+const invoOne = new Invoice("Jhon", "Grocery", 1425);
+const invoTwo = new Invoice("Clara", "Books", 900);
 
-// const form = document.querySelector('form')!;
+let invoices : Invoice[] = [];
+
+invoices.push(invoOne);
+invoices.push(invoTwo);
+console.log(invoices)
+
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 // console.log(form.children);
 
