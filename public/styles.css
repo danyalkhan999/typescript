@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@100;300&display=swap');
+
+:root{
+  --blue: #355070;
+}
+
 body{
     margin: 0;
-    font-family: Roboto; 
+    font-family: 'Mukta', sans-serif; 
   }
   .wrapper{
     max-width: 960px;
@@ -8,7 +14,7 @@ body{
   }
   h1{
     margin: 40px auto;
-    color: #ff0aa7;
+    color: var(--blue);
     text-align: center;
   }
   ul{
@@ -21,7 +27,7 @@ body{
     margin: 10px auto;
   }
   li h4{
-    color: #ff0aa7;
+    color: var(--blue);
     margin: 0;
     text-transform: capitalize;
   }
@@ -42,7 +48,7 @@ body{
   label{
     display: block;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #333;
     margin: 16px 0 6px;
   }
@@ -58,7 +64,7 @@ body{
   button{
     color: white;
     border: 0;
-    background: #ff0aa7;
+    background: var(--blue);
     padding: 6px;
     min-width: 80px;
     border-radius: 4px;
