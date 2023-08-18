@@ -1,63 +1,50 @@
-// interface
-interface IsPerson {
-    name: string;
-    age: number;
-    speak(a: string) : void;
-    spent(x: number) : number;
-}
+import { Invoice } from "./classes/Invoice.js";
+import { Payments } from "./classes/Payments.js";
+import { HasFormatter } from "./interfaces/HasFormatter.js";
 
-const me : IsPerson = {
-    name: "Danyal",
-    age: 22,
-    speak(text: string): void {
-        console.log(text)
-    },
-    spent(amount: number) : number {
-        console.log(`${this.name} spend ${amount}`);
-        return amount;
-    }
-}
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
 
-const greetPerson = (person: IsPerson) => {
-    console.log("Hello", person.name);
-}
+// docOne = new Invoice("Groot", "Fruits", 549);
+// docTwo = new Payments("Daniel", "Plumbing", 2199);
 
-greetPerson(me);
+// let docs: HasFormatter[] = [];
 
+// docs.push(docOne);
+// docs.push(docTwo);
 
-import {Invoice} from './classes/Invoice.js'
+// const invoOne = new Invoice("Jhon", "Grocery", 1425);
+// const invoTwo = new Invoice("Clara", "Books", 900);
 
-const invoOne = new Invoice("Jhon", "Grocery", 1425);
-const invoTwo = new Invoice("Clara", "Books", 900);
+// let invoices: Invoice[] = [];
 
-let invoices : Invoice[] = [];
+// invoices.push(invoOne);
+// invoices.push(invoTwo);
 
-invoices.push(invoOne);
-invoices.push(invoTwo);
+// invoices.forEach((i) => {
+//   console.log(i.client, i.amount, i.format());
+// });
 
-
-invoices.forEach(i => {
-    console.log(i.client, i.amount, i.format())
-})
-
-
-const form = document.querySelector('.new-item-form') as HTMLFormElement;
+const form = document.querySelector(".new-item-form") as HTMLFormElement;
 // console.log(form.children);
 
 // inputs
 
-const type = document.querySelector('#type') as HTMLSelectElement;
+const type = document.querySelector("#type") as HTMLSelectElement;
 const toFrom = document.querySelector("#tofrom") as HTMLInputElement;
 const details = document.querySelector("#details") as HTMLInputElement;
 const amount = document.querySelector("#amount") as HTMLInputElement;
 
-form.addEventListener('submit', (e: Event) => {
-    e.preventDefault();
+form.addEventListener("submit", (e: Event) => {
+  e.preventDefault();
 
-    console.log(
-        type.value,
-        toFrom.value,
-        details.value,
-        amount.valueAsNumber
-    )
-})
+  let doc: HasFormatter;
+
+  if (type.value === "invoice") {
+    doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+  } else {
+    doc = new Payments(toFrom.value, details.value, amount.valueAsNumber);
+  }
+
+  console.log(doc);
+});
